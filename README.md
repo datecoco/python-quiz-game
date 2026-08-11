@@ -76,4 +76,5 @@ python-practice
 | 최고 점수 | [📷 최고 점수 화면 보기](screenshots/score.png) |
 | Python 버전 | [📷 Python 버전 확인](screenshots/ver.png) |
 | Git 브랜치 | [📷 Git 브랜치 확인](screenshots/-b.png) |
+| Git 작업 기록 | [📷 Git Log 확인](screenshots/git_log.png) |
 > Clone / Pull 실습 완료
