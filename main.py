@@ -84,6 +84,7 @@ class QuizGame:
         self.best_score = 0
 
 
+
     # 퀴즈 풀기
     def play_quiz(self):
 
@@ -117,6 +118,7 @@ class QuizGame:
 
                     if 1 <= answer <= 4:
                         break
+
                     else:
                         print("1~4 사이 숫자를 입력하세요.")
 
@@ -126,10 +128,12 @@ class QuizGame:
 
 
             if quiz.check_answer(answer):
+
                 print("정답입니다!")
                 score += 1
 
             else:
+
                 print("오답입니다.")
 
 
@@ -162,6 +166,7 @@ class QuizGame:
         choice4 = input("4번 선택지 : ")
 
 
+
         while True:
 
             try:
@@ -174,7 +179,9 @@ class QuizGame:
                 else:
                     print("1~4 사이 숫자를 입력하세요.")
 
+
             except ValueError:
+
                 print("숫자를 입력하세요.")
 
 
@@ -194,6 +201,26 @@ class QuizGame:
         self.quiz_list.append(new_quiz)
 
         print("퀴즈가 추가되었습니다.")
+
+
+
+    # 퀴즈 목록
+    def show_quiz_list(self):
+
+        print()
+        print("===== 퀴즈 목록 =====")
+
+        print()
+        print(
+            "총",
+            len(self.quiz_list),
+            "개의 퀴즈가 있습니다."
+        )
+
+
+        for i, quiz in enumerate(self.quiz_list, start=1):
+
+            print(i, quiz.question)
 
 
 
@@ -231,6 +258,11 @@ class QuizGame:
             elif menu == "2":
 
                 self.add_quiz()
+
+
+            elif menu == "3":
+
+                self.show_quiz_list()
 
 
             elif menu == "5":
