@@ -17,46 +17,36 @@ class Quiz:
 
 # 기본 퀴즈 5개
 default_quizzes = [
-    Quiz(
-        "다음 중 무라카미 하루키의 책 제목은?",
-        [
-            "1984",
-            "오디세이아",
-            "색채가 없는 다자키 쓰쿠루와 그가 순례를 떠난 해",
-            "이방인"
-        ],
-        3
-    ),
 
     Quiz(
-        "다음 중 조지 오웰의 소설은?",
+        "다음 중 히가시노 게이고의 작품은?",
         [
+            "용의자 X의 헌신",
             "1984",
             "데미안",
-            "이방인",
-            "설국"
+            "변신"
         ],
         1
     ),
 
     Quiz(
-        "다음 중 알베르 카뮈의 소설은?",
+        "다음 중 조지 오웰의 작품은?",
         [
+            "동물농장",
             "이방인",
             "노인과 바다",
-            "변신",
-            "위대한 개츠비"
+            "데미안"
         ],
         1
     ),
 
     Quiz(
-        "다음 중 헤르만 헤세의 작품은?",
+        "다음 중 프란츠 카프카의 작품은?",
         [
-            "데미안",
-            "1984",
+            "변신",
+            "위대한 개츠비",
             "설국",
-            "동물농장"
+            "오만과 편견"
         ],
         1
     ),
@@ -65,20 +55,74 @@ default_quizzes = [
         "다음 중 어니스트 헤밍웨이의 작품은?",
         [
             "노인과 바다",
-            "변신",
             "데미안",
-            "이방인"
+            "1984",
+            "동물농장"
+        ],
+        1
+    ),
+
+    Quiz(
+        "다음 중 헤르만 헤세의 작품은?",
+        [
+            "데미안",
+            "변신",
+            "이방인",
+            "위대한 개츠비"
         ],
         1
     )
 ]
 
 class QuizGame:
+
     def __init__(self):
         self.quiz_list = default_quizzes
         self.best_score = 0
 
+
+    def play_quiz(self):
+
+        if len(self.quiz_list) == 0:
+            print("등록된 퀴즈가 없습니다.")
+            return
+
+        score = 0
+
+        print()
+        print("퀴즈를 시작합니다!")
+
+        for i, quiz in enumerate(self.quiz_list, start=1):
+
+            print()
+            print("--------------------")
+            print("[문제", i, "]")
+
+            quiz.show()
+
+            answer = int(
+                input("정답 번호 : ")
+            )
+
+            if quiz.check_answer(answer):
+                print("정답입니다!")
+                score += 1
+
+            else:
+                print("오답입니다.")
+
+
+        print()
+        print(
+            len(self.quiz_list),
+            "문제 중",
+            score,
+            "문제 정답!"
+        )
+
+
     def show_menu(self):
+
         print()
         print("========================================")
         print("          나만의 책 퀴즈 게임")
@@ -90,18 +134,30 @@ class QuizGame:
         print("5. 종료")
         print("========================================")
 
+
     def run(self):
+
         while True:
+
             self.show_menu()
 
-            menu = input("번호를 선택하세요 : ").strip()
+            menu = input(
+                "번호를 선택하세요 : "
+            ).strip()
 
-            if menu == "5":
+
+            if menu == "1":
+                self.play_quiz()
+
+
+            elif menu == "5":
                 print("프로그램을 종료합니다.")
                 break
 
+
             else:
                 print("현재 준비 중인 기능입니다.")
+
 
 
 game = QuizGame()
