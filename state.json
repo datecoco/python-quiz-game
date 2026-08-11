@@ -61,5 +61,6 @@
             "answer": 3
         }
     ],
-    "best_score": 50
+    "best_score": 50,
+    "has_played": true
 }
