@@ -72,3 +72,37 @@ default_quizzes = [
         1
     )
 ]
+
+class QuizGame:
+    def __init__(self):
+        self.quiz_list = default_quizzes
+        self.best_score = 0
+
+    def show_menu(self):
+        print()
+        print("========================================")
+        print("          나만의 책 퀴즈 게임")
+        print("========================================")
+        print("1. 퀴즈 풀기")
+        print("2. 퀴즈 추가")
+        print("3. 퀴즈 목록")
+        print("4. 점수 확인")
+        print("5. 종료")
+        print("========================================")
+
+    def run(self):
+        while True:
+            self.show_menu()
+
+            menu = input("번호를 선택하세요 : ").strip()
+
+            if menu == "5":
+                print("프로그램을 종료합니다.")
+                break
+
+            else:
+                print("현재 준비 중인 기능입니다.")
+
+
+game = QuizGame()
+game.run()
