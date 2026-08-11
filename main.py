@@ -74,6 +74,7 @@ default_quizzes = [
     )
 ]
 
+
 class QuizGame:
 
     def __init__(self):
@@ -90,19 +91,32 @@ class QuizGame:
         score = 0
 
         print()
+        print("========================================")
         print("퀴즈를 시작합니다!")
+        print("총", len(self.quiz_list), "문제")
+        print("========================================")
+
 
         for i, quiz in enumerate(self.quiz_list, start=1):
 
             print()
-            print("--------------------")
+            print("----------------------------------------")
             print("[문제", i, "]")
 
             quiz.show()
 
-            answer = int(
-                input("정답 번호 : ")
-            )
+            while True:
+                try:
+                    answer = int(input("정답 번호 : "))
+
+                    if 1 <= answer <= 4:
+                        break
+                    else:
+                        print("1~4 사이 숫자를 입력하세요.")
+
+                except ValueError:
+                    print("숫자를 입력하세요.")
+
 
             if quiz.check_answer(answer):
                 print("정답입니다!")
@@ -113,12 +127,16 @@ class QuizGame:
 
 
         print()
+        print("========================================")
         print(
+            "결과:",
             len(self.quiz_list),
             "문제 중",
             score,
             "문제 정답!"
         )
+        print("========================================")
+
 
 
     def show_menu(self):
@@ -135,15 +153,14 @@ class QuizGame:
         print("========================================")
 
 
+
     def run(self):
 
         while True:
 
             self.show_menu()
 
-            menu = input(
-                "번호를 선택하세요 : "
-            ).strip()
+            menu = input("번호를 선택하세요 : ").strip()
 
 
             if menu == "1":
