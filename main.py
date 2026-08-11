@@ -138,6 +138,9 @@ class QuizGame:
 
 
 
+        result = score * 100 // len(self.quiz_list)
+
+
         print()
         print("========================================")
         print(
@@ -147,7 +150,17 @@ class QuizGame:
             score,
             "문제 정답!"
         )
+        print("점수:", result, "점")
         print("========================================")
+
+
+
+        # 최고 점수 갱신
+        if result > self.best_score:
+
+            self.best_score = result
+
+            print("새로운 최고 점수입니다!")
 
 
 
@@ -166,7 +179,6 @@ class QuizGame:
         choice4 = input("4번 선택지 : ")
 
 
-
         while True:
 
             try:
@@ -178,7 +190,6 @@ class QuizGame:
 
                 else:
                     print("1~4 사이 숫자를 입력하세요.")
-
 
             except ValueError:
 
@@ -224,6 +235,20 @@ class QuizGame:
 
 
 
+    # 점수 확인
+    def show_score(self):
+
+        print()
+        print("===== 최고 점수 =====")
+
+        print(
+            "현재 최고 점수는",
+            self.best_score,
+            "점입니다."
+        )
+
+
+
     # 메뉴
     def show_menu(self):
 
@@ -263,6 +288,11 @@ class QuizGame:
             elif menu == "3":
 
                 self.show_quiz_list()
+
+
+            elif menu == "4":
+
+                self.show_score()
 
 
             elif menu == "5":
