@@ -15,6 +15,7 @@ class Quiz:
         return user_answer == self.answer
 
 
+
 # 기본 퀴즈 5개
 default_quizzes = [
 
@@ -75,6 +76,7 @@ default_quizzes = [
 ]
 
 
+
 class QuizGame:
 
     def __init__(self):
@@ -82,11 +84,13 @@ class QuizGame:
         self.best_score = 0
 
 
+    # 퀴즈 풀기
     def play_quiz(self):
 
         if len(self.quiz_list) == 0:
             print("등록된 퀴즈가 없습니다.")
             return
+
 
         score = 0
 
@@ -105,7 +109,9 @@ class QuizGame:
 
             quiz.show()
 
+
             while True:
+
                 try:
                     answer = int(input("정답 번호 : "))
 
@@ -118,12 +124,14 @@ class QuizGame:
                     print("숫자를 입력하세요.")
 
 
+
             if quiz.check_answer(answer):
                 print("정답입니다!")
                 score += 1
 
             else:
                 print("오답입니다.")
+
 
 
         print()
@@ -139,6 +147,57 @@ class QuizGame:
 
 
 
+    # 퀴즈 추가
+    def add_quiz(self):
+
+        print()
+        print("새로운 퀴즈를 추가합니다.")
+
+
+        question = input("문제를 입력하세요 : ")
+
+        choice1 = input("1번 선택지 : ")
+        choice2 = input("2번 선택지 : ")
+        choice3 = input("3번 선택지 : ")
+        choice4 = input("4번 선택지 : ")
+
+
+        while True:
+
+            try:
+
+                answer = int(input("정답 번호 : "))
+
+                if 1 <= answer <= 4:
+                    break
+
+                else:
+                    print("1~4 사이 숫자를 입력하세요.")
+
+            except ValueError:
+                print("숫자를 입력하세요.")
+
+
+
+        new_quiz = Quiz(
+            question,
+            [
+                choice1,
+                choice2,
+                choice3,
+                choice4
+            ],
+            answer
+        )
+
+
+        self.quiz_list.append(new_quiz)
+
+        print("퀴즈가 추가되었습니다.")
+
+
+
+    # 메뉴
     def show_menu(self):
 
         print()
@@ -154,6 +213,7 @@ class QuizGame:
 
 
 
+    # 실행
     def run(self):
 
         while True:
@@ -164,16 +224,25 @@ class QuizGame:
 
 
             if menu == "1":
+
                 self.play_quiz()
 
 
+            elif menu == "2":
+
+                self.add_quiz()
+
+
             elif menu == "5":
+
                 print("프로그램을 종료합니다.")
                 break
 
 
             else:
+
                 print("현재 준비 중인 기능입니다.")
+
 
 
 
