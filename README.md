@@ -1,4 +1,4 @@
-# 1. 📚 나만의 책 퀴즈 게임
+# 📚 나만의 책 퀴즈 게임
 
 Python으로 제작한 기반 문학 퀴즈 게임입니다.
 
@@ -47,7 +47,8 @@ python-practice
 ├── main.py
 ├── state.json
 ├── README.md
-├── RESULT.md  
+├── RESULT.md
+├── LEARNING.md
 └── screenshots
     ├── menu.png
     ├── play.png
@@ -82,10 +83,8 @@ python-practice
 | Git 작업 기록 | [📷 Git Log 확인](screenshots/git_log.png) |
 > Clone / Pull 실습 완료
 
-# 2. 최종결과물
 
-## ✅ 최종 결과물
+## 📑 프로젝트 문서
 
-과제 요구사항별 구현 결과와 증빙 자료는 아래에서 확인할 수 있습니다.
-
-👉 [최종 결과물 및 증빙 확인하기](RESULT.md)
+- [✅ 최종 결과물 및 증빙](RESULT.md)
+- [📚 과제 목표 및 학습 내용](LEARNING.md)
