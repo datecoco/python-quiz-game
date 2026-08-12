@@ -34,7 +34,7 @@
 | --------------------------------- | :-: | --------------------------------------- |
 | 프로젝트 코드 GitHub 업로드 | ✅ | [📷 GitHub 저장소](screenshots/github.png) |
 | 10개 이상의 의미 있는 커밋                  |  ✅  | [📷 Git Log](screenshots/git_log.png)   |
-| 브랜치 생성 및 병합 (`checkout`, `merge`) |  ✅  | [📷 Git 작업 기록](screenshots/git_log.png) |
+| 브랜치 생성 및 병합 (`checkout`, `merge`) | ✅ | [📷 브랜치 생성](screenshots/branch.png) / [📷 Git Log](screenshots/git_log.png) |
 | `git clone`을 사용하여 저장소를 복제 | ✅ | [📷 Clone 저장소 확인](screenshots/clone.png) |
 | `git pull`을 사용하여 원격 저장소의 변경사항을 가져옴 | ✅ | [📷 Pull 실행 확인](screenshots/pull.png) |
 | README 프로젝트 개요 작성                 |  ✅  | [README로 이동](README.md)                 |

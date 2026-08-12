@@ -42,7 +42,7 @@ python3 main.py
 
 ## 📁 파일 구조
 
-```text
+```
 python-practice
 ├── main.py
 ├── state.json
@@ -50,11 +50,22 @@ python-practice
 ├── RESULT.md
 ├── LEARNING.md
 └── screenshots
-    ├── menu.png
-    ├── play.png
+    ├── branch.png
     ├── add_quiz.png
+    ├── class_quiz.png
+    ├── class_quizgame.png
+    ├── clone.png
+    ├── data_load.png
+    ├── git_log.png
+    ├── github.png
+    ├── json_storage.png
     ├── list.png
-    └── score.png
+    ├── menu.png
+    ├── methods.png
+    ├── play.png
+    ├── pull.png
+    ├── score.png
+    └── ver.png
 ```
 
 ## 💾 데이터 파일 설명
