@@ -87,4 +87,4 @@ python-practice
 ## 📑 프로젝트 문서
 
 - [✅ 최종 결과물 및 증빙](RESULT.md)
-- [📚 과제 목표 및 학습 내용](LEARNING.md)
+- [📚 과제 목표](LEARNING.md)
