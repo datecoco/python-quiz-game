@@ -9,7 +9,7 @@ JSON 파일 저장 기능을 통해 프로그램 종료 후에도 퀴즈 데이�
 
 ## 📖 퀴즈 주제 선정 이유
 
-최근에 작고하신 히가시노 게이고 작가를 추모하며, 개인적으로 좋아하는 고전작가들로 퀴즈를 만들었습니다.
+최근에 작고하신 히가시노 게이고 작가를 추모하고, 개인적으로 좋아하는 고전작가들로 퀴즈를 만들었습니다.
 
 선정 작가:
 
@@ -90,7 +90,7 @@ python-practice
 | 퀴즈 목록 | [📷 퀴즈 목록 화면 보기](screenshots/list.png) |
 | 최고 점수 | [📷 최고 점수 화면 보기](screenshots/score.png) |
 | Python 버전 | [📷 Python 버전 확인](screenshots/ver.png) |
-| Git 브랜치 | [📷 Git 브랜치 확인](screenshots/-b.png) |
+| Git 브랜치 | [📷 Git 브랜치 확인](screenshots/branch.png) |
 | Git 작업 기록 | [📷 Git Log 확인](screenshots/git_log.png) |
 > Clone / Pull 실습 완료
 

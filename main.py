@@ -1,5 +1,5 @@
 import json
-
+# Life is short, you need Python.
 
 class Quiz:
     def __init__(self, question, choices, answer):

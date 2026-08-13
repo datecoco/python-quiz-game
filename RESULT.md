@@ -43,16 +43,3 @@
 | README 기능 목록 작성                   |  ✅  | [README로 이동](README.md)                 |
 | README 파일 구조 작성                   |  ✅  | [README로 이동](README.md)                 |
 | README `state.json` 데이터 파일 설명     |  ✅  | [README로 이동](README.md)                 |
-
----
-
-## 📌 최종 확인
-
-* Python 콘솔 퀴즈 게임 구현 완료
-* 객체 지향 구조 (`Quiz`, `QuizGame`) 적용
-* JSON을 이용한 데이터 영속성 구현
-* Git 기능 단위 커밋 10회 이상 수행
-* Git 브랜치 생성 및 병합 수행
-* GitHub 원격 저장소 업로드
-* `clone`, `pull` 실습 수행
-* README 및 실행 화면 작성
