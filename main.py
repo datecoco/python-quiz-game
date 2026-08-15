@@ -1,5 +1,16 @@
 import json
+
 # Life is short, you need Python.
+# 1. Beautiful is better than ugly. 아름다운 것이 추한 것보다 낫다.
+# 2. Explicit is better than implicit. 명시적인 것이 암시적인 것보다 낫다. 
+# 3. Simple is better than complex. 간결한 것이 복합적인 것보다 낫다.
+# 4. Complex is better than complicated. 복합적인 것이 복잡한 것보다 낫다.
+# 5. Flat is better than nested. 들여쓰기를 적게 하는 것이 깊은 것보다 낫다.
+# 6. Sparse is better than dense. 듬성듬성한 것이 밀집한 것보다 낫다. 
+# 7. Readability counts. 가독성은 중요하다.
+# 8. Special cases aren't special enough to break the rules. 특별한 경우는 규칙을 어길 정도로 특별하지 않다.
+# 9. Although practicality beats purity. 허나 실용성은 순수성을 이긴다.
+# 10. Errors should never pass silently. 오류는 절대로 조용히 지나가지 않아야 한다.
 
 class Quiz:
     def __init__(self, question, choices, answer):
@@ -246,6 +257,8 @@ class QuizGame:
 
             quiz.show()
 
+# 퀴즈 정답 4~5 수량 수정 시
+
             answer = self.get_number(
                 "정답 번호 : ",
                 1,
@@ -299,6 +312,8 @@ class QuizGame:
         )
 
         choices = []
+        
+# 퀴즈 정답 4~5 수량 수정 시
 
         for i in range(1, 5):
             choice = self.get_text(
